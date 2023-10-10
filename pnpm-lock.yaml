@@ -145,6 +145,9 @@ importers:
 
   apps/docs:
     dependencies:
+      front:
+        specifier: workspace:*
+        version: link:../../packages/front
       next:
         specifier: 13.5.4
         version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
@@ -185,6 +188,9 @@ importers:
 
   apps/web:
     dependencies:
+      front:
+        specifier: workspace:*
+        version: link:../../packages/front
       next:
         specifier: 13.5.4
         version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
