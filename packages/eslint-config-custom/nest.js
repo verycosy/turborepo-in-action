@@ -1,23 +1,10 @@
-const { resolve } = require('node:path');
-
-const project = resolve(process.cwd(), 'tsconfig.json');
-
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project,
-  },
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: './base.js',
   root: true,
   env: {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js'],
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
@@ -30,8 +17,5 @@ module.exports = {
         },
       },
     ],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
